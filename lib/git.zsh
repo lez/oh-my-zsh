@@ -1,3 +1,12 @@
+# Outputs current git hash
+function git_hash_info() {
+  local ref
+  if [[ "$(command git config --get oh-my-zsh.hide-status 2>/dev/null)" != "1" ]]; then
+    ref=$(command git rev-parse --short HEAD 2> /dev/null) || return 0
+    echo "$ZSH_THEME_GIT_HASH_PREFIX${ref}$ZSH_THEME_GIT_HASH_SUFFIX"
+  fi
+}
+
 # Outputs current branch info in prompt format
 function git_prompt_info() {
   local ref
