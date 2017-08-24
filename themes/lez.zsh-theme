@@ -1,8 +1,8 @@
-if [[ -z $ZSH_THEME_CLOUD_PREFIX ]]; then
-    ZSH_THEME_CLOUD_PREFIX='●'
+if [[ -z $ZSH_THEME_LEZ_PREFIX ]]; then
+    ZSH_THEME_LEZ_PREFIX='●'
 fi
 
-PROMPT='%(?.%{$fg[green]%}  $ZSH_THEME_CLOUD_PREFIX.%{$fg_bold[red]%}${(l:3:: :)?})%{$fg_bold[green]%} %~ %{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}'
+PROMPT='%(?.%{$fg[green]%}  $ZSH_THEME_LEZ_PREFIX.%{$fg_bold[red]%}${(l:3:: :)?})%{$fg_bold[green]%} %~ %{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
