@@ -6,5 +6,11 @@ PROMPT='%(?.%{$fg[green]%}  $ZSH_THEME_CLOUD_PREFIX.%{$fg_bold[red]%}${(l:3:: :)
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[green]%}] %{$fg[red]%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[green]%}]"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}%{$fg_bold[green]%}] %{$fg[red]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}%{$fg_bold[green]%}]"
+
+ZSH_THEME_GIT_PROMPT_REMOTE_STATUS_DETAILED=true
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE=" +"
+ZSH_THEME_GIT_PROMPT_AHEAD_REMOTE_COLOR=%{$reset_color%}%{$fg[green]%}
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE=" -"
+ZSH_THEME_GIT_PROMPT_BEHIND_REMOTE_COLOR=%{$reset_color%}%{$fg[red]%}
