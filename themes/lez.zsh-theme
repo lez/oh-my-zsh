@@ -14,10 +14,10 @@ if [[ -z $ZSH_THEME_LEZ_DIR_COLOR ]]; then
     ZSH_THEME_LEZ_DIR_COLOR='010'  # green
 fi
 
-PROMPT='%(?.%{$FG[$ZSH_THEME_LEZ_PREFIX_COLOR]%}${(l:3:: :)ZSH_THEME_LEZ_PREFIX}.%{$fg_bold[red]%}${(l:3:: :)?})%{$FG[$ZSH_THEME_LEZ_DIR_COLOR]%} %~ %{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}'
+PROMPT='%(?.%{$FG[$ZSH_THEME_LEZ_PREFIX_COLOR]%}${(l:3:: :)ZSH_THEME_LEZ_PREFIX}.%{$fg_bold[red]%}${(l:3:: :)?})%{$FG[$ZSH_THEME_LEZ_DIR_COLOR]%} %~%{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}'
 RPROMPT='$(git_hash_info)'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}[%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[green]%}[%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$reset_color%}%{$fg_bold[green]%}] %{$fg[red]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN="%{$reset_color%}%{$fg_bold[green]%}]"
