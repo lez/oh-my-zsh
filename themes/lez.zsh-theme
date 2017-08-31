@@ -18,8 +18,11 @@ if [[ -n $SCHROOT_CHROOT_NAME ]]; then
     ZSH_THEME_LEZ_CHROOT_INDICATOR="($SCHROOT_CHROOT_NAME) "
 fi
 
+if [[ -z $ZSH_THEME_LEZ_ROOT && $(whoami) = 'root' ]]; then
+    ZSH_THEME_LEZ_ROOT='%# '
+fi
 
-PROMPT='$ZSH_THEME_LEZ_CHROOT_INDICATOR%(?.%{$FG[$ZSH_THEME_LEZ_PREFIX_COLOR]%}${(l:3:: :)ZSH_THEME_LEZ_PREFIX}.%{$fg_bold[red]%}${(l:3:: :)?})%{$FG[$ZSH_THEME_LEZ_DIR_COLOR]%} %~%{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}'
+PROMPT='$ZSH_THEME_LEZ_CHROOT_INDICATOR%(?.%{$FG[$ZSH_THEME_LEZ_PREFIX_COLOR]%}${(l:3:: :)ZSH_THEME_LEZ_PREFIX}.%{$fg_bold[red]%}${(l:3:: :)?})%{$FG[$ZSH_THEME_LEZ_DIR_COLOR]%} %~%{$fg_bold[cyan]%}$(git_prompt_info) %{$reset_color%}$ZSH_THEME_LEZ_ROOT'
 RPROMPT='$(git_hash_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[green]%}[%{$fg[cyan]%}"
