@@ -229,3 +229,7 @@ function omz_urldecode {
 
   echo -E "$decoded"
 }
+
+function timeofday {
+    date +%H:%M
+}
